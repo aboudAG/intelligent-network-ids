@@ -659,12 +659,7 @@ Cela permet de conserver un dépôt GitHub léger tout en permettant de reprodui
 
 # Auteur
 
-**aboudAG**
+**abdenour AGAG**
 
 Projet académique et portfolio en réseaux, systèmes et cybersécurité.
 
----
-
-# Licence
-
-Ce projet est distribué sous licence MIT.
