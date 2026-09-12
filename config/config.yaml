@@ -1,0 +1,40 @@
+project_name: Intelligent Network Intrusion Detection System
+random_state: 42
+test_size: 0.2
+target_column: Label
+positive_label: ATTACK
+negative_label: NORMAL
+
+paths:
+  raw_data_dir: data/raw
+  processed_data_dir: data/processed
+  sample_data: data/sample/sample_cicids_like.csv
+  models_dir: models
+  metrics_dir: results/metrics
+  figures_dir: results/figures
+  reports_dir: results/reports
+
+features:
+  drop_columns:
+    - Flow ID
+    - Source IP
+    - Destination IP
+    - Timestamp
+  max_features: 35
+
+models:
+  random_forest:
+    n_estimators: 200
+    max_depth: null
+    class_weight: balanced
+  svm:
+    kernel: rbf
+    C: 1.0
+    gamma: scale
+    class_weight: balanced
+  neural_network:
+    hidden_layer_sizes:
+      - 64
+      - 32
+    max_iter: 300
+    early_stopping: true
